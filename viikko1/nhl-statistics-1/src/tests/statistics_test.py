@@ -1,3 +1,4 @@
+from enum import Enum
 import unittest
 from statistics_service import StatisticsService
 from player import Player
@@ -14,12 +15,28 @@ class PlayerReaderStub:
         ]
 
 
+class SortBy(Enum):
+    POINTS = 1
+    GOALS = 2
+    ASSISTS = 3
+
+
 class TestStatisticsService(unittest.TestCase):
     def setUp(self):
         self.stats = StatisticsService(PlayerReaderStub())
 
-    def test_top_works(self):
-        top_list = self.stats.top(4)
+    def test_top_points_works(self):
+        top_list = self.stats.top(4, SortBy.POINTS)
+        self.assertEqual(top_list[0].name, "Gretzky")
+        self.assertEqual(top_list[4].name, "Semenko")
+
+    def test_top_goals_works(self):
+        top_list = self.stats.top(4, SortBy.GOALS)
+        self.assertEqual(top_list[0].name, "Lemieux")
+        self.assertEqual(top_list[4].name, "Semenko")
+
+    def test_top_assists_works(self):
+        top_list = self.stats.top(4, SortBy.ASSISTS)
         self.assertEqual(top_list[0].name, "Gretzky")
         self.assertEqual(top_list[4].name, "Semenko")
 
