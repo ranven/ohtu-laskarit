@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.10.12 on linux)" generated="20231113 11:35:47.135" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.10.12 on linux)" generated="20231113 14:47:36.249" rpa="false" schemaversion="4">
 <suite id="s1" name="Tests" source="/home/verave/Documents/ohtu/ohtu-laskarit/viikko3/login-robot/src/tests">
 <suite id="s1-s1" name="Login" source="/home/verave/Documents/ohtu/ohtu-laskarit/viikko3/login-robot/src/tests/login.robot">
 <test id="s1-s1-t1" name="Login With Correct Credentials" line="6">
@@ -7,128 +7,360 @@
 <kw name="Create User" library="AppLibrary">
 <arg>kalle</arg>
 <arg>kalle123</arg>
-<status status="PASS" starttime="20231113 11:35:47.176" endtime="20231113 11:35:47.176"/>
+<status status="PASS" starttime="20231113 14:47:36.290" endtime="20231113 14:47:36.290"/>
 </kw>
 <kw name="Input Login Command" library="resource">
 <kw name="Input" library="AppLibrary">
 <arg>login</arg>
-<status status="PASS" starttime="20231113 11:35:47.177" endtime="20231113 11:35:47.177"/>
+<status status="PASS" starttime="20231113 14:47:36.291" endtime="20231113 14:47:36.291"/>
 </kw>
-<status status="PASS" starttime="20231113 11:35:47.176" endtime="20231113 11:35:47.177"/>
+<status status="PASS" starttime="20231113 14:47:36.290" endtime="20231113 14:47:36.291"/>
 </kw>
-<status status="PASS" starttime="20231113 11:35:47.175" endtime="20231113 11:35:47.177"/>
+<status status="PASS" starttime="20231113 14:47:36.289" endtime="20231113 14:47:36.291"/>
 </kw>
 <kw name="Input Credentials" library="resource">
 <arg>kalle</arg>
 <arg>kalle123</arg>
 <kw name="Input" library="AppLibrary">
 <arg>${username}</arg>
-<status status="PASS" starttime="20231113 11:35:47.178" endtime="20231113 11:35:47.178"/>
+<status status="PASS" starttime="20231113 14:47:36.292" endtime="20231113 14:47:36.292"/>
 </kw>
 <kw name="Input" library="AppLibrary">
 <arg>${password}</arg>
-<status status="PASS" starttime="20231113 11:35:47.178" endtime="20231113 11:35:47.179"/>
+<status status="PASS" starttime="20231113 14:47:36.293" endtime="20231113 14:47:36.293"/>
 </kw>
 <kw name="Run Application" library="AppLibrary">
-<status status="PASS" starttime="20231113 11:35:47.179" endtime="20231113 11:35:47.179"/>
+<status status="PASS" starttime="20231113 14:47:36.293" endtime="20231113 14:47:36.293"/>
 </kw>
-<status status="PASS" starttime="20231113 11:35:47.177" endtime="20231113 11:35:47.179"/>
+<status status="PASS" starttime="20231113 14:47:36.291" endtime="20231113 14:47:36.293"/>
 </kw>
 <kw name="Output Should Contain" library="AppLibrary">
 <arg>Logged in</arg>
-<status status="PASS" starttime="20231113 11:35:47.179" endtime="20231113 11:35:47.179"/>
+<status status="PASS" starttime="20231113 14:47:36.293" endtime="20231113 14:47:36.294"/>
 </kw>
-<status status="PASS" starttime="20231113 11:35:47.175" endtime="20231113 11:35:47.180"/>
+<status status="PASS" starttime="20231113 14:47:36.289" endtime="20231113 14:47:36.294"/>
 </test>
 <test id="s1-s1-t2" name="Login With Incorrect Password" line="16">
 <kw name="Create User And Input Login Command" type="SETUP">
 <kw name="Create User" library="AppLibrary">
 <arg>kalle</arg>
 <arg>kalle123</arg>
-<status status="PASS" starttime="20231113 11:35:47.182" endtime="20231113 11:35:47.182"/>
+<status status="PASS" starttime="20231113 14:47:36.295" endtime="20231113 14:47:36.296"/>
 </kw>
 <kw name="Input Login Command" library="resource">
 <kw name="Input" library="AppLibrary">
 <arg>login</arg>
-<status status="PASS" starttime="20231113 11:35:47.183" endtime="20231113 11:35:47.183"/>
+<status status="PASS" starttime="20231113 14:47:36.296" endtime="20231113 14:47:36.296"/>
 </kw>
-<status status="PASS" starttime="20231113 11:35:47.183" endtime="20231113 11:35:47.183"/>
+<status status="PASS" starttime="20231113 14:47:36.296" endtime="20231113 14:47:36.297"/>
 </kw>
-<status status="PASS" starttime="20231113 11:35:47.181" endtime="20231113 11:35:47.183"/>
+<status status="PASS" starttime="20231113 14:47:36.295" endtime="20231113 14:47:36.297"/>
 </kw>
 <kw name="Input Credentials" library="resource">
 <arg>kalle</arg>
 <arg>kalle321</arg>
 <kw name="Input" library="AppLibrary">
 <arg>${username}</arg>
-<status status="PASS" starttime="20231113 11:35:47.184" endtime="20231113 11:35:47.184"/>
+<status status="PASS" starttime="20231113 14:47:36.298" endtime="20231113 14:47:36.298"/>
 </kw>
 <kw name="Input" library="AppLibrary">
 <arg>${password}</arg>
-<status status="PASS" starttime="20231113 11:35:47.184" endtime="20231113 11:35:47.185"/>
+<status status="PASS" starttime="20231113 14:47:36.298" endtime="20231113 14:47:36.298"/>
 </kw>
 <kw name="Run Application" library="AppLibrary">
-<status status="PASS" starttime="20231113 11:35:47.185" endtime="20231113 11:35:47.185"/>
+<status status="PASS" starttime="20231113 14:47:36.299" endtime="20231113 14:47:36.299"/>
 </kw>
-<status status="PASS" starttime="20231113 11:35:47.184" endtime="20231113 11:35:47.185"/>
+<status status="PASS" starttime="20231113 14:47:36.297" endtime="20231113 14:47:36.299"/>
 </kw>
 <kw name="Output Should Contain" library="AppLibrary">
 <arg>Invalid username or password</arg>
-<status status="PASS" starttime="20231113 11:35:47.185" endtime="20231113 11:35:47.185"/>
+<status status="PASS" starttime="20231113 14:47:36.299" endtime="20231113 14:47:36.300"/>
 </kw>
-<status status="PASS" starttime="20231113 11:35:47.180" endtime="20231113 11:35:47.186"/>
+<status status="PASS" starttime="20231113 14:47:36.294" endtime="20231113 14:47:36.300"/>
 </test>
 <test id="s1-s1-t3" name="Login With Nonexistent Username" line="20">
 <kw name="Create User And Input Login Command" type="SETUP">
 <kw name="Create User" library="AppLibrary">
 <arg>kalle</arg>
 <arg>kalle123</arg>
-<status status="PASS" starttime="20231113 11:35:47.187" endtime="20231113 11:35:47.187"/>
+<status status="PASS" starttime="20231113 14:47:36.302" endtime="20231113 14:47:36.302"/>
 </kw>
 <kw name="Input Login Command" library="resource">
 <kw name="Input" library="AppLibrary">
 <arg>login</arg>
-<status status="PASS" starttime="20231113 11:35:47.188" endtime="20231113 11:35:47.188"/>
+<status status="PASS" starttime="20231113 14:47:36.302" endtime="20231113 14:47:36.303"/>
 </kw>
-<status status="PASS" starttime="20231113 11:35:47.187" endtime="20231113 11:35:47.188"/>
+<status status="PASS" starttime="20231113 14:47:36.302" endtime="20231113 14:47:36.303"/>
 </kw>
-<status status="PASS" starttime="20231113 11:35:47.187" endtime="20231113 11:35:47.188"/>
+<status status="PASS" starttime="20231113 14:47:36.301" endtime="20231113 14:47:36.303"/>
 </kw>
 <kw name="Input Credentials" library="resource">
 <arg>kale</arg>
 <arg>kalle123</arg>
 <kw name="Input" library="AppLibrary">
 <arg>${username}</arg>
-<status status="PASS" starttime="20231113 11:35:47.189" endtime="20231113 11:35:47.189"/>
+<status status="PASS" starttime="20231113 14:47:36.304" endtime="20231113 14:47:36.304"/>
 </kw>
 <kw name="Input" library="AppLibrary">
 <arg>${password}</arg>
-<status status="PASS" starttime="20231113 11:35:47.189" endtime="20231113 11:35:47.190"/>
+<status status="PASS" starttime="20231113 14:47:36.304" endtime="20231113 14:47:36.304"/>
 </kw>
 <kw name="Run Application" library="AppLibrary">
-<status status="PASS" starttime="20231113 11:35:47.190" endtime="20231113 11:35:47.190"/>
+<status status="PASS" starttime="20231113 14:47:36.304" endtime="20231113 14:47:36.305"/>
 </kw>
-<status status="PASS" starttime="20231113 11:35:47.188" endtime="20231113 11:35:47.190"/>
+<status status="PASS" starttime="20231113 14:47:36.303" endtime="20231113 14:47:36.305"/>
 </kw>
 <kw name="Output Should Contain" library="AppLibrary">
 <arg>Invalid username or password</arg>
-<status status="PASS" starttime="20231113 11:35:47.190" endtime="20231113 11:35:47.190"/>
+<status status="PASS" starttime="20231113 14:47:36.305" endtime="20231113 14:47:36.305"/>
 </kw>
-<status status="PASS" starttime="20231113 11:35:47.186" endtime="20231113 11:35:47.191"/>
+<status status="PASS" starttime="20231113 14:47:36.300" endtime="20231113 14:47:36.305"/>
 </test>
-<status status="PASS" starttime="20231113 11:35:47.166" endtime="20231113 11:35:47.191"/>
+<status status="PASS" starttime="20231113 14:47:36.280" endtime="20231113 14:47:36.306"/>
 </suite>
-<status status="PASS" starttime="20231113 11:35:47.136" endtime="20231113 11:35:47.192"/>
+<suite id="s1-s2" name="Register" source="/home/verave/Documents/ohtu/ohtu-laskarit/viikko3/login-robot/src/tests/register.robot">
+<test id="s1-s2-t1" name="Register With Valid Username And Password" line="6">
+<kw name="Input New Command And Create User" type="SETUP">
+<kw name="Create User" library="AppLibrary">
+<arg>kalle</arg>
+<arg>kalle123</arg>
+<status status="PASS" starttime="20231113 14:47:36.312" endtime="20231113 14:47:36.312"/>
+</kw>
+<kw name="Input New Command" library="resource">
+<kw name="Input" library="AppLibrary">
+<arg>new</arg>
+<status status="PASS" starttime="20231113 14:47:36.313" endtime="20231113 14:47:36.313"/>
+</kw>
+<status status="PASS" starttime="20231113 14:47:36.312" endtime="20231113 14:47:36.313"/>
+</kw>
+<status status="PASS" starttime="20231113 14:47:36.311" endtime="20231113 14:47:36.313"/>
+</kw>
+<kw name="Input Credentials" library="resource">
+<arg>ville</arg>
+<arg>ville123</arg>
+<kw name="Input" library="AppLibrary">
+<arg>${username}</arg>
+<status status="PASS" starttime="20231113 14:47:36.314" endtime="20231113 14:47:36.314"/>
+</kw>
+<kw name="Input" library="AppLibrary">
+<arg>${password}</arg>
+<status status="PASS" starttime="20231113 14:47:36.314" endtime="20231113 14:47:36.315"/>
+</kw>
+<kw name="Run Application" library="AppLibrary">
+<status status="PASS" starttime="20231113 14:47:36.315" endtime="20231113 14:47:36.315"/>
+</kw>
+<status status="PASS" starttime="20231113 14:47:36.313" endtime="20231113 14:47:36.315"/>
+</kw>
+<kw name="Output Should Contain" library="AppLibrary">
+<arg>New user registered</arg>
+<status status="PASS" starttime="20231113 14:47:36.315" endtime="20231113 14:47:36.316"/>
+</kw>
+<status status="PASS" starttime="20231113 14:47:36.311" endtime="20231113 14:47:36.316"/>
+</test>
+<test id="s1-s2-t2" name="Register With Already Taken Username And Valid Password" line="10">
+<kw name="Input New Command And Create User" type="SETUP">
+<kw name="Create User" library="AppLibrary">
+<arg>kalle</arg>
+<arg>kalle123</arg>
+<status status="PASS" starttime="20231113 14:47:36.317" endtime="20231113 14:47:36.318"/>
+</kw>
+<kw name="Input New Command" library="resource">
+<kw name="Input" library="AppLibrary">
+<arg>new</arg>
+<status status="PASS" starttime="20231113 14:47:36.318" endtime="20231113 14:47:36.319"/>
+</kw>
+<status status="PASS" starttime="20231113 14:47:36.318" endtime="20231113 14:47:36.319"/>
+</kw>
+<status status="PASS" starttime="20231113 14:47:36.317" endtime="20231113 14:47:36.319"/>
+</kw>
+<kw name="Input Credentials" library="resource">
+<arg>kalle</arg>
+<arg>kalle123</arg>
+<kw name="Input" library="AppLibrary">
+<arg>${username}</arg>
+<status status="PASS" starttime="20231113 14:47:36.320" endtime="20231113 14:47:36.320"/>
+</kw>
+<kw name="Input" library="AppLibrary">
+<arg>${password}</arg>
+<status status="PASS" starttime="20231113 14:47:36.320" endtime="20231113 14:47:36.320"/>
+</kw>
+<kw name="Run Application" library="AppLibrary">
+<status status="PASS" starttime="20231113 14:47:36.320" endtime="20231113 14:47:36.321"/>
+</kw>
+<status status="PASS" starttime="20231113 14:47:36.319" endtime="20231113 14:47:36.321"/>
+</kw>
+<kw name="Output Should Contain" library="AppLibrary">
+<arg>Username is already taken</arg>
+<status status="PASS" starttime="20231113 14:47:36.321" endtime="20231113 14:47:36.321"/>
+</kw>
+<status status="PASS" starttime="20231113 14:47:36.316" endtime="20231113 14:47:36.322"/>
+</test>
+<test id="s1-s2-t3" name="Register With Too Short Username And Valid Password" line="14">
+<kw name="Input New Command And Create User" type="SETUP">
+<kw name="Create User" library="AppLibrary">
+<arg>kalle</arg>
+<arg>kalle123</arg>
+<status status="PASS" starttime="20231113 14:47:36.323" endtime="20231113 14:47:36.323"/>
+</kw>
+<kw name="Input New Command" library="resource">
+<kw name="Input" library="AppLibrary">
+<arg>new</arg>
+<status status="PASS" starttime="20231113 14:47:36.324" endtime="20231113 14:47:36.324"/>
+</kw>
+<status status="PASS" starttime="20231113 14:47:36.323" endtime="20231113 14:47:36.324"/>
+</kw>
+<status status="PASS" starttime="20231113 14:47:36.323" endtime="20231113 14:47:36.324"/>
+</kw>
+<kw name="Input Credentials" library="resource">
+<arg>k</arg>
+<arg>kalle123</arg>
+<kw name="Input" library="AppLibrary">
+<arg>${username}</arg>
+<status status="PASS" starttime="20231113 14:47:36.325" endtime="20231113 14:47:36.325"/>
+</kw>
+<kw name="Input" library="AppLibrary">
+<arg>${password}</arg>
+<status status="PASS" starttime="20231113 14:47:36.325" endtime="20231113 14:47:36.326"/>
+</kw>
+<kw name="Run Application" library="AppLibrary">
+<status status="PASS" starttime="20231113 14:47:36.326" endtime="20231113 14:47:36.326"/>
+</kw>
+<status status="PASS" starttime="20231113 14:47:36.325" endtime="20231113 14:47:36.326"/>
+</kw>
+<kw name="Output Should Contain" library="AppLibrary">
+<arg>Invalid username. Username must be at least 3 characters long and consist of letters a-z</arg>
+<status status="PASS" starttime="20231113 14:47:36.326" endtime="20231113 14:47:36.326"/>
+</kw>
+<status status="PASS" starttime="20231113 14:47:36.322" endtime="20231113 14:47:36.327"/>
+</test>
+<test id="s1-s2-t4" name="Register With Enough Long But Invald Username And Valid Password" line="18">
+<kw name="Input New Command And Create User" type="SETUP">
+<kw name="Create User" library="AppLibrary">
+<arg>kalle</arg>
+<arg>kalle123</arg>
+<status status="PASS" starttime="20231113 14:47:36.329" endtime="20231113 14:47:36.329"/>
+</kw>
+<kw name="Input New Command" library="resource">
+<kw name="Input" library="AppLibrary">
+<arg>new</arg>
+<status status="PASS" starttime="20231113 14:47:36.330" endtime="20231113 14:47:36.330"/>
+</kw>
+<status status="PASS" starttime="20231113 14:47:36.329" endtime="20231113 14:47:36.330"/>
+</kw>
+<status status="PASS" starttime="20231113 14:47:36.328" endtime="20231113 14:47:36.330"/>
+</kw>
+<kw name="Input Credentials" library="resource">
+<arg>kalle123</arg>
+<arg>kalle123</arg>
+<kw name="Input" library="AppLibrary">
+<arg>${username}</arg>
+<status status="PASS" starttime="20231113 14:47:36.331" endtime="20231113 14:47:36.331"/>
+</kw>
+<kw name="Input" library="AppLibrary">
+<arg>${password}</arg>
+<status status="PASS" starttime="20231113 14:47:36.332" endtime="20231113 14:47:36.332"/>
+</kw>
+<kw name="Run Application" library="AppLibrary">
+<status status="PASS" starttime="20231113 14:47:36.332" endtime="20231113 14:47:36.332"/>
+</kw>
+<status status="PASS" starttime="20231113 14:47:36.331" endtime="20231113 14:47:36.332"/>
+</kw>
+<kw name="Output Should Contain" library="AppLibrary">
+<arg>Invalid username. Username must be at least 3 characters long and consist of letters a-z</arg>
+<status status="PASS" starttime="20231113 14:47:36.333" endtime="20231113 14:47:36.333"/>
+</kw>
+<status status="PASS" starttime="20231113 14:47:36.327" endtime="20231113 14:47:36.333"/>
+</test>
+<test id="s1-s2-t5" name="Register With Valid Username And Too Short Password" line="22">
+<kw name="Input New Command And Create User" type="SETUP">
+<kw name="Create User" library="AppLibrary">
+<arg>kalle</arg>
+<arg>kalle123</arg>
+<status status="PASS" starttime="20231113 14:47:36.335" endtime="20231113 14:47:36.335"/>
+</kw>
+<kw name="Input New Command" library="resource">
+<kw name="Input" library="AppLibrary">
+<arg>new</arg>
+<status status="PASS" starttime="20231113 14:47:36.336" endtime="20231113 14:47:36.336"/>
+</kw>
+<status status="PASS" starttime="20231113 14:47:36.336" endtime="20231113 14:47:36.336"/>
+</kw>
+<status status="PASS" starttime="20231113 14:47:36.335" endtime="20231113 14:47:36.336"/>
+</kw>
+<kw name="Input Credentials" library="resource">
+<arg>ville</arg>
+<arg>vv</arg>
+<kw name="Input" library="AppLibrary">
+<arg>${username}</arg>
+<status status="PASS" starttime="20231113 14:47:36.337" endtime="20231113 14:47:36.338"/>
+</kw>
+<kw name="Input" library="AppLibrary">
+<arg>${password}</arg>
+<status status="PASS" starttime="20231113 14:47:36.338" endtime="20231113 14:47:36.338"/>
+</kw>
+<kw name="Run Application" library="AppLibrary">
+<status status="PASS" starttime="20231113 14:47:36.338" endtime="20231113 14:47:36.338"/>
+</kw>
+<status status="PASS" starttime="20231113 14:47:36.337" endtime="20231113 14:47:36.339"/>
+</kw>
+<kw name="Output Should Contain" library="AppLibrary">
+<arg>Invalid password. Password must be at least 8 characters long and not consist of only letters.</arg>
+<status status="PASS" starttime="20231113 14:47:36.339" endtime="20231113 14:47:36.339"/>
+</kw>
+<status status="PASS" starttime="20231113 14:47:36.334" endtime="20231113 14:47:36.340"/>
+</test>
+<test id="s1-s2-t6" name="Register With Valid Username And Long Enough Password Containing Only Letters" line="26">
+<kw name="Input New Command And Create User" type="SETUP">
+<kw name="Create User" library="AppLibrary">
+<arg>kalle</arg>
+<arg>kalle123</arg>
+<status status="PASS" starttime="20231113 14:47:36.341" endtime="20231113 14:47:36.342"/>
+</kw>
+<kw name="Input New Command" library="resource">
+<kw name="Input" library="AppLibrary">
+<arg>new</arg>
+<status status="PASS" starttime="20231113 14:47:36.342" endtime="20231113 14:47:36.343"/>
+</kw>
+<status status="PASS" starttime="20231113 14:47:36.342" endtime="20231113 14:47:36.343"/>
+</kw>
+<status status="PASS" starttime="20231113 14:47:36.341" endtime="20231113 14:47:36.343"/>
+</kw>
+<kw name="Input Credentials" library="resource">
+<arg>ville</arg>
+<arg>villeville</arg>
+<kw name="Input" library="AppLibrary">
+<arg>${username}</arg>
+<status status="PASS" starttime="20231113 14:47:36.343" endtime="20231113 14:47:36.344"/>
+</kw>
+<kw name="Input" library="AppLibrary">
+<arg>${password}</arg>
+<status status="PASS" starttime="20231113 14:47:36.344" endtime="20231113 14:47:36.344"/>
+</kw>
+<kw name="Run Application" library="AppLibrary">
+<status status="PASS" starttime="20231113 14:47:36.344" endtime="20231113 14:47:36.345"/>
+</kw>
+<status status="PASS" starttime="20231113 14:47:36.343" endtime="20231113 14:47:36.345"/>
+</kw>
+<kw name="Output Should Contain" library="AppLibrary">
+<arg>Invalid password. Password must be at least 8 characters long and not consist of only letters.</arg>
+<status status="PASS" starttime="20231113 14:47:36.345" endtime="20231113 14:47:36.345"/>
+</kw>
+<status status="PASS" starttime="20231113 14:47:36.340" endtime="20231113 14:47:36.346"/>
+</test>
+<status status="PASS" starttime="20231113 14:47:36.307" endtime="20231113 14:47:36.347"/>
+</suite>
+<status status="PASS" starttime="20231113 14:47:36.250" endtime="20231113 14:47:36.348"/>
 </suite>
 <statistics>
 <total>
-<stat pass="3" fail="0" skip="0">All Tests</stat>
+<stat pass="9" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="3" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="9" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
 <stat pass="3" fail="0" skip="0" id="s1-s1" name="Login">Tests.Login</stat>
+<stat pass="6" fail="0" skip="0" id="s1-s2" name="Register">Tests.Register</stat>
 </suite>
 </statistics>
 <errors>
