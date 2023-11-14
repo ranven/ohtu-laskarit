@@ -33,6 +33,32 @@ Register With Nonmatching Password And Password Confirmation
     Submit Credentials
     Register Should Fail With Message  Password confirmation didn't match the password.
 
+Login After Successful Registration
+    Set Username  venla
+    Set Password  venla123
+    Set Password Confirmation  venla123
+    Submit Credentials
+    Register Should Succeed
+    Go To Login Page 
+    Login Page Should Be Open
+    Set Username  venla
+    Set Password  venla123
+    Submit Login Credentials
+    Login Should Succeed
+
+Login After Failed Registration
+    Set Username  venlavenla
+    Set Password  venlavenla
+    Set Password Confirmation  venlavenla
+    Submit Credentials
+    Register Should Fail With Message  Invalid password. Password must be at least 8 characters long and not consist of only letters.
+    Go To Login Page
+    Login Page Should Be Open
+    Set Username  venlavenla
+    Set Password  venlavenla
+    Submit Login Credentials
+    Login Should Fail With Message  Invalid username or password
+
 
 *** Keywords ***
 Register Should Succeed
@@ -57,3 +83,14 @@ Set Password
 Set Password Confirmation
     [Arguments]  ${password_confirmation}
     Input Password  password_confirmation  ${password_confirmation}
+
+Submit Login Credentials 
+    Click Button  Login
+
+Login Should Succeed 
+    Main Page Should Be Open
+
+Login Should Fail With Message
+    [Arguments]  ${message}
+    Login Page Should Be Open
+    Page Should Contain  ${message}
