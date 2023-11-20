@@ -78,3 +78,43 @@ class TestKauppa(unittest.TestCase):
         self.kauppa.tilimaksu("kalle", "54321")
         self.pankki_mock.tilisiirto.assert_called_with(
             "kalle", 42, "54321", "33333-44455", 10)
+
+    def test_aloita_asiointi_nollaa_edellisen_ostoksen_tiedot(self):
+        self.kauppa.aloita_asiointi()
+        self.kauppa.lisaa_koriin(2)
+
+        self.kauppa.aloita_asiointi()
+        self.kauppa.lisaa_koriin(1)
+
+        self.kauppa.tilimaksu("ville", "11111")
+        self.pankki_mock.tilisiirto.assert_called_with(
+            ANY, ANY, ANY, ANY, 5)
+
+    def test_kauppa_pyytää_uuden_viitenumeron_maksutapahtumalle(self):
+        self.kauppa.aloita_asiointi()
+        self.kauppa.lisaa_koriin(2)
+        self.kauppa.tilimaksu("ville", "11111")
+        self.assertEqual(self.viitegeneraattori_mock.uusi.call_count, 1)
+
+        self.kauppa.aloita_asiointi()
+        self.kauppa.lisaa_koriin(3)
+        self.kauppa.tilimaksu("ville", "11111")
+        self.assertEqual(self.viitegeneraattori_mock.uusi.call_count, 2)
+
+    def test_kauppa_poista_korista_metodi_poistaa_tuotteen_korista_ja_palauttaa_varastoon(self):
+        self.kauppa.aloita_asiointi()
+        self.kauppa.lisaa_koriin(2)
+        self.kauppa.poista_korista(2)
+        # saldon pitäisi olla nyt 3 ja tuotteen palautettu varastoon
+
+        self.kauppa.tilimaksu("ville", "11111")
+        self.pankki_mock.tilisiirto.assert_called_with(
+            ANY, ANY, ANY, ANY, 0)
+
+        self.kauppa.lisaa_koriin(2)
+        self.kauppa.lisaa_koriin(2)
+        self.kauppa.lisaa_koriin(2)
+
+        self.kauppa.tilimaksu("ville", "11111")
+        self.pankki_mock.tilisiirto.assert_called_with(
+            ANY, ANY, ANY, ANY, 30)
