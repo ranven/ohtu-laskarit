@@ -43,7 +43,6 @@ class TestKauppa(unittest.TestCase):
         self.kauppa.tilimaksu("pekka", "12345")
 
         self.pankki_mock.tilisiirto.assert_called()
-        # toistaiseksi ei välitetä kutsuun liittyvistä argumenteista
 
     def test_ostoksen_paaytyttya_pankin_metodia_tilisiirto_kutsutaan_oikeilla_parametreilla(self):
         self.kauppa.aloita_asiointi()
