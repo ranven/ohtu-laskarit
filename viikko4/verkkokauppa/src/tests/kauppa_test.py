@@ -38,7 +38,6 @@ class TestKauppa(unittest.TestCase):
                              self.viitegeneraattori_mock)
 
     def test_ostoksen_paaytyttya_pankin_metodia_tilisiirto_kutsutaan(self):
-        # tehdään ostokset
         self.kauppa.aloita_asiointi()
         self.kauppa.lisaa_koriin(1)
         self.kauppa.tilimaksu("pekka", "12345")
