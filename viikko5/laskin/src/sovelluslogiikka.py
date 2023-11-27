@@ -16,8 +16,9 @@ class Sovelluslogiikka:
 
     def kumoa(self):
         i = len(self._historia)-2
-        self._arvo = self._historia[i]
-        self._historia.pop()
+        if i >= 0:
+            self._arvo = self._historia[i]
+            self._historia.pop()
 
     def aseta_arvo(self, arvo):
         self._arvo = arvo
